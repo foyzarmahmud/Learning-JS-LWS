@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <button onclick="this.innerHTML = Date()">The Time is : </button>
+    
+
+    <script>
+
+        const bestBoy = {
+            firstName : "Fayzar",
+            lastName : "Mahmud",
+            liveIn : "Dinajpur",
+            age : 23,
+            salary : 18000,
+            getFullName : function(){
+                return this.firstName + this.lastName + " Live in " + this.liveIn;
+            },
+
+            chargeBill : function(amount, tax, vat){
+                this.salary = this.salary - amount - tax - vat;
+                return this.salary;
+            }
+        }
+
+        const leftBoy = {
+            firstName : "Humayun",
+            lastName : "Ahmed",
+            age : 24,
+            salary : 20000,
+        }
+
+        const rightBoy ={
+            firstName : "Poltu",
+            lastName : "Khan",
+            age : 25,
+            salary : 16000,
+        }
+
+        // How to use object bind methods
+
+       const payBill = bestBoy.chargeBill.bind(leftBoy);
+       console.log(payBill(3000));
+
+       const deuBill = bestBoy.chargeBill.bind(rightBoy);
+       console.log(deuBill(9500));
+
+    //    How to use Object call methods
+
+      const abul =  bestBoy.chargeBill.call(rightBoy,2000,300,200);
+        console.log(abul);
+        const babul = bestBoy.chargeBill.call(leftBoy, 5000, 400, 600);
+        console.log(babul);
+
+
+        // How to Use Object apply Methods
+
+        const okay = bestBoy.chargeBill.apply(rightBoy, [4000,400,600]);
+        console.log(okay);
+        
+        const applyBro = bestBoy.chargeBill.apply(leftBoy, [2000, 400, 600]);
+        console.log(applyBro);
+
+
+
+
+
+
+    </script>
+
+</body>
+</html>

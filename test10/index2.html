@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+
+    <!-- How to use array splice method  -->
+
+    <script>
+        const arySplice = ["Fayzar", "Mahmud", "Titir", "Eva", "Rokeya"];
+        console.log(arySplice);
+        arySplice.sort();
+        console.log(arySplice);
+        arySplice.splice(3,2,"Chirir-Bandar","Dinajpur");
+        console.log(arySplice);
+       let okay = arySplice.splice(1,2);
+        console.log(arySplice);
+
+        console.log(okay);
+         console.log(arySplice); // cuting the main array
+
+        // How to sort on Neumeric array
+        
+         const numbers = [12,3,4,54,23,1,89,9];
+            console.log(numbers);
+            numbers.sort(function(a,b){
+                return a - b;
+            })
+            console.log(numbers);
+
+        
+    </script>
+
+
+</body>
+</html>

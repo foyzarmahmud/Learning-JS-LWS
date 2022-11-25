@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+        <script>
+            const normalPerson = {
+                firstName : "Fayzar",
+                lastName : "Mahmud",
+                age : 23,
+                salary : 16000,
+                getFullName : function(){
+                    this.firstName + " " + this.lastName;
+                },
+                chargeBill : function(amount){
+                    this.salary = this.salary - amount;
+                    return this.salary;
+                }
+            };
+            
+
+                const girlFriend = {
+                    firstName : "Onek Rag",
+                    lastName : "kore Thake",
+                    salary : 20000,
+                    age : 21,
+                };
+
+                const sisterFriend = {
+                    firstName : "Habib",
+                    lastName : "Mirza",
+                    age : 19,
+                    salary : 17000,
+                }
+
+ const girlFriendBill =   normalPerson.chargeBill.bind(girlFriend);
+console.log(girlFriendBill(5000));
+
+const sisterBill = normalPerson.chargeBill.bind(sisterFriend);
+console.log(sisterBill(700));
+        </script>
+</body>
+</html>

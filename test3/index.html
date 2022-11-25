@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            // practices on object
+
+            const man = {
+                firstName : "Fayzar",
+                lastName : "Mahmud",
+                age : 23,
+                home : "Dinajpur",
+                salary : 15000,
+                getFullName : function(){
+                    this.firstName + " " + lastName;
+                },
+                chargeBill : function(amount){
+                    this.salary = this.salary - amount;
+                    return this.salary;
+                }
+            }
+            man.chargeBill(1500);
+            console.log(man.salary);
+
+
+
+
+        const friendMama = {
+            firstName : "Abul",
+            lastName : "Hasan",
+            age : 21,
+            salary : 20000,
+            chargeBillHoke: function(charge){
+                this.salary = this.salary - charge;
+                return this.salary;
+            }
+        }
+
+        console.log(friendMama.chargeBillHoke(2500));
+
+    </script>
+</body>
+</html>

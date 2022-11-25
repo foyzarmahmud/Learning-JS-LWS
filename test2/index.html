@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+            <!-- How can we use an Onject -->
+            <script>
+
+                    const man = {
+                        firstName : "Fayzar",
+                        lastName : "Mahmud",
+                        age : 23,
+                        home : "Dinajpur",
+                        profession : "Garments worker",
+                        fullName : function(){
+                            return this.firstName + " " + this.lastName + " Live in " + this.home;
+                        }
+                    }
+
+
+                    console.log(man.fullName());
+
+
+
+                    const friend = {
+                        firstName : "Abul",
+                        lastName : "Hasan",
+                        age : 22,
+                        home : "Dhaka",
+                        profession : "Pocket Mar",
+                        friendHome : function(){
+                            return this.firstName + " " + this.lastName + " Live in " + this.home;
+                        }
+                    }
+
+
+
+                    console.log(friend.friendHome());
+
+            </script>
+</body>
+</html>

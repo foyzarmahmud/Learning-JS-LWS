@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+
+        const normalPerson = {
+            firstName : "Fayzar",
+            lastName : "Mahmud",
+            age : 23,
+            salary : 18000,
+            getFullName : function(){
+                return this.firstName + " " + this.lastName;
+            },
+
+            chargeBill : function(amount){
+                this.salary = this.salary - amount;
+                return this.salary;
+            }
+        }
+
+        const goodPerson = {
+            firstName : "Habib",
+            lastName : "Khan",
+            age : 21,
+            salary : 20000,
+        }
+
+        const coolPerson = {
+            firstName : "Mostafizur",
+            lastName : "Rahman",
+            age : 23,
+            salary : 25000,
+        }
+
+    const deuBill = normalPerson.chargeBill.bind(goodPerson);
+    console.log(deuBill(4000));
+            
+    const billPaid = normalPerson.chargeBill.bind(coolPerson);
+    console.log(billPaid(3550));
+
+   
+
+
+
+    </script>
+</body>
+</html>
